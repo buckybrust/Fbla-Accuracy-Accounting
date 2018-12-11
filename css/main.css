@@ -1,21 +1,211 @@
-body{
-    color: blue;
+* {
+    margin: 0;
+    padding: 0;
 }
-.overflow1{
-    height:800px;
-    overflow:hidden;
+body{
+    overflow-x:hidden; /* needed for proper view of slideshow and menu animations */
+    font-size: 16px;
 }
 
-/* logo must get closer to the left side of the screen */
-@media only screen and (max-width: 1600px){
+div.container.mt-3 {
+    max-width: 100vw !important;
+    width:calc(100vw) !important; /* Makes slideshow size of window - scroll bar */
+    position:absolute;
+    top:-16px;
+    padding:0;
+}
+.left, .right{
+    width:40px;
+    height:40px;
+    background-color:gray;
+    border: 1px solid lightblue;
+    opacity: 1;
+    position:absolute;
+    top:50%;
+    margin-top: -20px;
+}
+.left{
+    left:20px;
+}
+.right{
+    right:20px;
+}
+.backdiv {
+    height: 800px;
+    background-position: center center;
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+}
+.caurosel-inner{
+    position:relative;
+}
+
+/*Nav Styles*/
+#nav_menu{
+    background-color: rgba(255, 255, 255, 0.7);
+    position:absolute;
+    top:50px;
+    left:30%;
+}
+.logo{
+    float:left;
+    width:250px;
+    height:250px;
+    position:absolute;
+    top:0;
+    left:10%;
+}
+#nav_menu{
+    float:left;
     
+}
+#nav_menu ul{
+    list-style:none;
+}
+#nav_menu ul li{
+    float:left;
+    border-top: 2px solid rgba(255, 255, 255, 0.7);
+    width:250px;
+    height:80px;
+    transition: border 600ms;
+}
+#nav_menu ul li a{
+    text-align: center;
+    display:block;
+    padding:25px 0px;;
+    margin: 0 auto;
+    font-weight:bold;
+    text-decoration: none;
+    color:black;
+}
+#nav_menu ul li:focus a, #nav_menu ul li:hover a{
+    color:blue;
+}
+#nav_menu ul li:focus, #nav_menu ul li:hover{
+    border-top: 2px solid blue;
+}
+#mobilemenu {
+    display:none;
+}
+#menubutton{
+    width:40px;
+    height:40px;
+    position:fixed;
+    top:10px;
+    right:10px;
+    background-color:#313131;
+    z-index: 1;
+    display:none;
+    padding:6px 10px;
+}
+
+
+/* Overall Section Styles */
+main{
+    padding-top:820px;
+    width:100%;
+    color:#667380;;
+}
+section h1{
+    text-align: center;
+    color:black;
+}
+.maxwidth{
+    width:1140px;
+    margin:auto;
+    padding:0px 10px;
+    font-size:16px;
+}
+
+
+
+/* Footer Styles */
+footer {
+    border-top: 2px solid #1a1a1a;
+    border-bottom: 2px solid #1a1a1a;
+    color:white;
+    text-align:center;
+    clear: both;
+    position: absolute;
+    background-color:#191919;
+    width:100%;
+    padding-top:70px;
+    padding-bottom:70px;
+}
+.footerbox{
+    float:left;
+}
+.footerbox h4, .footerbox h5{
+    font-weight:normal;
+}
+#box1{
+    width:262px;
+}
+#box2 a{
+    color:white;
+    text-decoration: none;
+}
+#box2 a:hover{
+    color:blue;
+}
+
+#box2{
+    width:165px;
+}
+#box3{
+    width:262px;
+}
+#box3 p{
+    color:#99a4b0;
+    font-size:115%;
+}
+#box4{
+    width:360px;
+}
+
+
+/* logo must get closer to the left side of the screen */
+@media only screen and (max-width: 1600px) {
+    .logo{
+        left:20px;
+    }
+    #nav_menu{
+        left:25%;
+    }
+    #nav_menu ul li{
+        width:230px;
+    }
+}
+
+@media only screen and (max-width:1400px){
+    #nav_menu{
+        left:19.7%;
+    }
+    .logo{
+        width:15%;
+        height:auto;
+        left:5px;
+    }
 }
 
 /* Nav must shrink text and remove the slanted borders */
 /* Due Dates area must decrease width of buttons */
 /* Margin and footer columns width decreases */
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:1200px) {
     
+    .backdiv{
+        background-size: auto 800px;
+    }
+    
+    .logo{
+        
+    }
+    #nav_menu ul li{
+        width:195px;
+    }
+    .maxwidth{
+        width:940px;
+    }
 }
 
 /* Nav Must turn into a button that opens */
@@ -26,34 +216,101 @@ body{
 /* Contact Us area must simplify to 1 column layout without the picture in the background */
 /* Trusted Partners area must show 3 partners instead of 4. */
 /* Footer shrinks to 2 column lots of margin and width again, margin shrinks responsively */
-@media only screen and (max-width:990px){
+@media only screen and (max-width:990px) {
+    .logo{
+        width:100px;
+        height:100px;
+        top:0px;
+    }
+    .maxwidth{
+        width:720px;
+    }
     
+    #nav_menu {
+        display:none;
+    }
+    
+    /*Mobile Menu Styles */
+    #menubutton{
+        display:block;
+        cursor:pointer;
+    }
+    #mobilemenu{
+        position:fixed;
+        right:0;
+        top:0;
+        height:100%;
+        background-color:#212529;
+        width:260px;
+        z-index: 1;
+    }
+    #mobilemenu ul{
+        margin-top:60px;
+        list-style: none;
+    }
+    #mobilemenu ul li a{
+        color:white;
+        padding-left:10px;
+        border-bottom:1px solid #b7becd;;
+        display:block;
+        width:100%;
+        height:50px;
+        padding:10px 50px;
+        text-decoration: none;
+        color:#b7becd;
+    }
+    #mobilemenu ul li a:hover, #mobilemenu ul li a:active{
+        transition: color 400ms;
+        color:blue;
+    }
 }
-
+    
+    
+   
 
 /* Carousel must downsize */
 /* About us animated pictures must take up 1 column for close too the full width of the screen, still needs a margin */
 /* Due Dates area must take 1 column with margin on the left and right, decrease the width responsively */
 /* Footer shrinks to 1 column layout with margin shrinking responsively */
 
-@media only screen and (max-width:768px){
-    .overflow1{
+@media only screen and (max-width:768px) {
+    .carousel-inner {
+        height: 450px;
+    }
+
+    .backdiv {
+        background-size: auto 450px;
         height:450px;
+    }
+    main{
+        padding-top:470px;
+    }
+    .maxwidth{
+        width:calc(100% - 10px);
     }
 }
 
 /* Due Dates area must remove most of the margin, continue to shrink width responsively */
 /* Trusted partners shows only 1 at a time now */
-@media only screen and (max-width:600px){
-    
-}
+@media only screen and (max-width:600px) {}
 
 
 /* Side arrows for carousol must disapear
 carousol must shrink slightly more */
-@media only screen and (max-width:480px){
-    .overflow1{
+@media only screen and (max-width:480px) {
+    .carousel-inner {
+        height: 360px;
+    }
+
+    .backdiv {
+        background-size: auto 360px;
         height:360px;
+    }
+    .maxwidth{
+        font-size:91%;
+    }
+    main{
+        padding-top:380px;
     }
 }
 
