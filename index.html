@@ -1,67 +1,267 @@
-<!doctype html><html lang='en'>
-<!--Name: Hunter Brust
-    Date: (date)
-    (Programming Title)-->
+<!DOCTYPE html>
+<html lang="en">
+<!-- All Pictures gotten from www.pexels.com -->
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    
-    <!--Shortcut Icon(Tab Icon)-->
-    <link rel="shortcut icon" href="pics/favicon.png">
-    
-    <!-- Title Goes Here -->
     <title>Accuracy Accounting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="pics/favicon.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <style>
+        .aboutbutton, .contactbutton{
+            display:inline-block;
+            margin:auto;
+        }
+        .aboutbutton a, .contactbutton a{
+            border: 1px solid white;
+            width:150px;
+            padding: 10px 15px;
+            display:block;
+            transition: background 600ms;
+            -webkit-transition: background 600ms;
+            text-align: center;
+            margin:auto;
+            font-weight:bold;
+        }
+        .headertext a{
+            color:white;
+            text-decoration: none;
+        }
+        .aboutbutton a{
+            background-color:#2777f7;
+        }
+        .contactbutton a{
+            background-color:none;
+        }
+        .aboutbutton a:hover, .aboutbutton a:focus{
+            background-color:rgba(0,0,0,0);
+        }
+        .contactbutton a:hover, .contactbutton a:focus{
+            background-color:#2777f7;
+        }
+        
+        #dissapeartext{
+            top:230px;
+            left:220px;
+        }
+        
+        @media only screen and (max-width:1600px) {
+            #dissapeartext{
+                left:60px;
+            }
+        }
+        
+        @media only screen and (max-width:1400px) {
+            #dissapeartext{
+                display:none;
+            }
+        }
+        
+        @media only screen and (max-width:990px) {
+            .contactbutton, .aboutbutton{
+                font-size:13px;
+            }
+            .contactbutton a, .aboutbutton a{
+                width:110px;
+            }
+        }
+        
+        @media only screen and (max-width:480px) {
+            .contactbutton, .aboutbutton{
+                font-size:12px;
+            }
+            .contactbutton a, .aboutbutton a{
+                width:95px;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <div class="container mt-3">
+        <div id="myCarousel" class="carousel slide carousel-fade">
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active overflow1">
-      <img class="d-block w-100 overflow2" src="pics/accounting1.jpg" alt="First slide">
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div style="background-image: url(pics/accounting1.jpg)" class="backdiv"></div>
+                    <div class="textholder">
+                        <div id="mymove1" class="headertext">
+                            <h1>Welcome To Accuracy</h1>
+                            <p>Here your satisfaction with the service we provide is our satisfaction. We are continuously striving to improve.</p>
+                            <div class="aboutbutton" style="margin:auto;display:inline-block;"><a href="html/faq.html#services">About Us</a></div>
+                            <div class="contactbutton"><a href="html/contact.html">Contact Us</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url(pics/accounting2.jpg);" class="backdiv"></div>
+                    <div class="textholder">
+                        <div id="mymove2" class="headertext">
+                            <h1>Reliable Service</h1>
+                            <p>We're rated to be the top in bringing consistent, reliable service by the leading experts in the field.</p>
+                            <div class="aboutbutton" style="margin:auto;display:inline-block;"><a href="html/faq.html#services">About Us</a></div>
+                            <div class="contactbutton"><a href="html/contact.html">Contact Us</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url(pics/accounting3.jpg);" class="backdiv"></div>
+                    <div class="textholder">
+                        <div id="mymove3" class="headertext">
+                            <h1>Competitive Pricing</h1>
+                            <p>We can get you all the services you need at an affordable price.</p>
+                            <div class="aboutbutton" style="margin:auto;display:inline-block;"><a href="html/faq.html#services">About Us</a></div>
+                            <div class="contactbutton"><a href="html/contact.html">Contact Us</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Nav HTML-->
+                <a href="animation/logoanimated.html"><img class="logo" src="pics/logofull.png" alt="Accuracy Accounting Logo" width="100" height="100"></a>
+                <p id="dissapeartext" style="z-index: 1; color:white; position:absolute;">Click Logo For Animation</p>
+                <nav id="mobilemenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="html/services.html">Services</a></li>
+                        <li><a href="html/contact.html">Contact Us</a></li>
+                        <li><a href="html/faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+                <nav id="nav_menu">
+                    <ul>
+                        <li style="border-top:2px solid #2777f7;"><a href="index.html" style="color:#2777f7 !important;">Home</a></li>
+                        <li><a href="html/services.html">Services</a></li>
+                        <li><a href="html/contact.html">Contact Us</a></li>
+                        <li><a href="html/faq.html">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div id="menubutton">
+                    <img width="20" height="20" alt="Open Menu Button" src="pics/menubrackets.png">
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control-prev" href="#main-slider-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+
+            <a class="right carousel-control-next" href="#main-slider-carousel" role="button" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+        </div>
     </div>
-    <div class="carousel-item overflow1">
-      <img class="d-block w-100 overflow2" src="pics/accounting2.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item overflow1">
-      <img class="d-block w-100 overflow2" src="pics/accounting1.jpg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-    
-    <div>
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, cu saepe omittam lucilius sit. Mei perfecto rationibus ea, ne eos dolore indoctum. An semper aliquid assentior eam, usu ludus oporteat quaestio at. At eam noluisse ponderum, tollit feugiat eos ne. Mea te vitae rationibus, mei te omnis oratio, eum falli dictas ea.
+    <main>
+        <section id="whyus" style="background-color:#f2f2f2; padding:40px 0px;">
+            <div class="maxwidth">
+                <h1>Why Choose Accuracy For Accounting Needs</h1>
+                <hr style="border-color:#2777f7;color:#2777f7;width:100px;margin:20px auto;border:px solid #2777f7">
+                <p style="padding-bottom:30px;">Accuracy is a new accounting firm that specializes in performing accounting responsibilities such as bookkeeping, taxes, audits, annual reports, and more for private and independent entrepreneurial businesses. We take pride in our low prices and exceptional customer service, seeing how even if you have the best services, that means nothing if the customer isn't provided with seamless customer experience. We have all the latest tools and many experienced workers to help you get whatever you may need taken care of. whether you may be a business or an individual we are here to work for you and to take care of exactly what you need.</p>
+            </div>
+        </section>
+        <a id="mission"></a>
+        <section style="margin-top:40px;">
+            <div class="maxwidth">
+                <h1 id="missio">Our Mission</h1>
+                <hr style="border-color:#2777f7;color:#2777f7;width:100px;margin:25px auto;border:px solid #2777f7">
+                <p style="padding-bottom:50px;">Our Mission as an accounting firm is to provide the best customer experience possible. A business without exceptional customer service is a dead one, which is why we take pride in our understanding of our clients and their struggles. If you have any questions, you visit our <a href="html/FAQ.html">FAQ page</a>. If you have questions not answered by the page, you can email us at <a href="mailto:hunterbrust@gmail.com">HunterBrust@gmail.com</a> or call us at <a href="tel:+31472850968">(314) 728-0968</a>.</p>
+            </div>
+        </section>
+        
+        <section id="testimonials" style="color:white;">
+            <div class="maxwidth">
+                <h1 style="padding-top:70px;color:white;">Testimonials</h1>
+                <hr style="border:1px solid white; margin:auto; margin-top:30px;margin-bottom:30px;">
 
-Officiis pertinax id eum, per semper abhorreant eu, graece honestatis ea cum. Id eos erant nihil democritum, pro no mollis labores constituam. Elit nonumes oportere ut duo, quem quas fabulas his ei, an solum appetere nec. Id vel timeam vivendo elaboraret.
+                <div class="testimon">
+                    <img class="leftpic" src="pics/pfp1.jpg" alt="profile pic">
+                    <p class="lefttext">Nick J. - "I was extremely surprised with how fast and cooperative these guys are!"</p>
+                    <hr class="testsep" style="margin:10px auto; display:none;">
+                </div>
 
-Eos no semper eloquentiam, vel vivendum prodesset sententiae ea. Nibh convenire et his, pro illud iusto eu. Pri virtute quaestio pertinacia eu, vero delenit id per. Nec in melius omnium cetero, ea nec ubique abhorreant vituperatoribus, pri ut expetendis appellantur. Dicant alterum voluptatibus at nec, nobis legimus no pri, meis legere fabellas ne qui.
+                <div class="testimon">
+                    <img src="pics/pfp2.jpg" class="rightpic" alt="profile pic">
+                    <p class="righttext">"I was amazed at how much time and money I saved thanks to Accuracy." - John B.</p>
+                    <hr class="testsep" style="margin:10px auto; display:none;">
+                    
 
-Erat dicant ius et, sed ne quas oratio sadipscing. Magna ornatus assueverit at eam, ea eum pericula sadipscing. Ne sed omnesque quaestio tractatos, prima dicunt pro at. Ut posse idque elitr duo, est delenit luptatum vivendum te, per partiendo democritum ut. Nec in ocurreret instructior, sed discere gloriatur ei. Nibh brute affert ne vel, illum apeirian gubergren ex cum, mel nostrum similique at. Ex vim omnis dolor dolore, suavitate sadipscing has at.
+                </div>
 
-</p>
-    </div>
-    
-    
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
+                <div class="testimon">
+                    <img class="leftpic" src="pics/pfp3.jpg" alt="profile pic">
+                    <p class="lefttext">Jimmy K. - "They offered some amazing service at a great price. I couldn't be more happy with the money I was able to save from their help."</p>
+                </div>
+            </div>
+        </section>
+        <a id="meetemployees"></a>
+        <section id="employment" style="padding-top:30px;padding-bottom:30px;">
+            <div class="maxwidth">
+                <h1>Employees</h1>
+                <hr style="border-color:#2777f7;color:#2777f7;width:100px;margin:25px auto;border:px solid #2777f7">
+
+                <p>Because customer service is our top priority, we see to it that each of our employees is understanding of customer struggles and has enough knowledge to properly assist customers in need. We accomplish this exceptional service through our thorough, merit-based employment system, ensuring that every customer is provided with extraordinary service from an extraordinary employee. Now meet our top employees</p>
+                
+                <!-- Logos designed by Hunter Brust -->
+                
+                <img src="pics/calculator.png" alt="calculator picture" width="30" style="float:left; margin-right:10px;">
+                <h2 style="margin-bottom:20px;margin-top:20px;">Hunter J. Brust</h2>
+                <p style="clear:both;">Currently, the main worker has had 100's of clients served. He has a gift in calculations and planning.</p>
+                
+                <img src="pics/folder.png" alt="paper picture" width="36" style="float:left; margin-right:10px;">
+                <h2 style="margin-bottom:20px;margin-top:20px;">Gauge Brown</h2>
+                <p style="clear:both;">The 2nd to join the business. He excels at getting customers top quality service and holds a portfolio of contacts for any of our clients' necessities.</p>
+                
+                <img src="pics/paper.png" alt="paper picture" width="30" style="float:left; margin-right:10px;">
+                <h2 style="margin-bottom:20px;margin-top:20px;">James</h2>
+                <p style="clear:both;">Newest worker. A skilled writer with flawless accuracy. He fills out the crates of federal papers and work that our clients need. And he does it well.</p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="maxwidth">
+            <a id="appointment" target="_top" style="background-color: #0D5FD9; color: white; height: 40px; text-transform: uppercase; font-family: 'Square Market', 'helvetica neue', helvetica, arial, sans-serif; letter-spacing: 1px; line-height: 38px; padding: 0 28px; border-radius: 3px; font-weight: 500; font-size: 14px; cursor: pointer; display: inline-block; margin:0 auto; display:block; text-align: center; width:250px;margin-bottom:10px;" href="https://squareup.com/appointments/book/T4DNDPSR369Y5/accuracy" rel="nofollow">Book an Appointment</a>
+            <div id="box1" class="footerbox">
+                <a href="index.html"><img src="pics/logofull.png" width="180" height="180"></a>
+            </div>
+            <div id="box2" class="footerbox">
+                <h4 style="margin:20px 0px;border-bottom:1px solid #2777f7;width:100px; margin: auto;margin-bottom:10px;padding:15px 0;">LINKS</h4>
+                <h5><a href="index.html">Home</a></h5>
+                <h5><a href="html/services.html">Services</a></h5>
+                <h5><a href="html/contact.html">Contact Us</a></h5>
+                <h5><a href="html/faq.html">FAQ</a></h5>
+            </div>
+            <div id="box3" class="footerbox">
+                <h4 style="margin:20px 0px;">GET IN TOUCH</h4>
+                <p>520 Fake Street, FakeTown, NR 90071</p>
+                <p style="margin-top:10px;"><a href="tel:+31472850968">(314) 728-0968</a></p>
+            </div>
+            <div id="box4" class="footerbox">
+                <h4 style="margin:20px 0px;">CONNECT ON SOCIAL</h4>
+                <div class="wrapper">
+                    <ul>
+                        <li class="facebook"><a href="https://www.facebook.com"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                        <li class="twitter"><a href="https://www.twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+                        <li class="google"><a href="https://www.google.com"><i class="fa fa-google fa-2x" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/javascript.js"></script>
 </body>
+
 </html>

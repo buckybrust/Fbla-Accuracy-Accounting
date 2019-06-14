@@ -1,0 +1,90 @@
+#mymove1 {
+    top:200px;
+    text-align: center;
+}
+
+#mymove2 {
+    float:left;
+    margin-left:50px;
+}
+
+#mymove3 {
+    float:right;
+    margin-right:50px;
+}
+#mymove3 h1{
+    text-align:right;
+}
+.headertext{
+    animation-delay: 1s;
+    opacity:1;
+    color:white;
+    
+    animation-fill-mode: forwards;
+}
+.headertext h1{
+    opacity:0;
+    font-size:60px;
+    animation-delay: 1s;
+    animation: mymoveh1 1s;
+    animation-fill-mode: forwards;
+    
+}
+.headertext p{
+    font-size:20px;
+    animation: mymovep 1s;
+    animation-fill-mode: forwards;
+}
+.textholder{
+    position:absolute;
+    top:0;
+    width:calc(100% - 20px);
+    height:100%;
+    padding-top:200px;
+}
+
+@keyframes mymoveh1 {
+    from {padding-top: 0px; opacity: 0;}
+    to {padding-top: 75px; opacity: 1}
+}
+
+@keyframes mymovep {
+    from {padding-top: 0px; padding-bottom: 0px; opacity: 0;}
+    to {padding-top: 8px; padding-bottom:8px; opacity: 1}
+}
+
+@media only screen and (max-width:1200px) {
+    .headertext h1{
+        font-size:55px;
+    }
+    .headertext p{
+        font-size:18px;
+    }
+}
+
+@media only screen and (max-width:990px) {
+    .headertext h1{
+        font-size:45px;
+    }
+    .headertext p{
+        font-size:14px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .textholder{
+        padding-top:65px;
+    }
+    .headertext h1{
+        font-size:35px;
+    }
+    .headertext p{
+        font-size:12px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .headertext h1{
+        font-size:25px;
+    }
+}
